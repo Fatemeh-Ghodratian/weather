@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="col-12 border rounded-pill m-auto p-3 mb-4" id="search-div">
+          <form class="search-form m-auto p-auto" id="search-form">
+            <div class="row">
+              <div class="col-7">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-2 p-0">
+                <input
+                  id="search-btn"
+                  type="submit"
+                  value="Search"
+                  class="form-control btn-success btn shadow-sm w-100"
+                />
+              </div>
+              <div class="col-2 p-0 ml-1">
+                <button class="btn w-100" id="current-location-button">
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 row border m-3">
+          <div class="col-5 pt-3 pb-3 pl-5 pr-5 mt-3 rounded">
+            <div class="pt-3">
+              <h1 id="city"></h1>
+              <ul>
+                <li id="date"></li>
+                <li id="description"></li>
+              </ul>
+            </div>
+            <div>
+              <div class="col-6">
+                <div class="clearfix">
+                  <div class="float-left">
+                    <span class="temperature" id="temperature"></span
+                    ><span class="units">°C</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+            <div class="col-12">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-7">
+            <img
+              class="col-12 pt-2"
+              id="vector"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/756/original/Untitled_design.png?1645465718"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-12 row border rounded h-25 pt-3" id="week-days-div">
+          <div class="col-2">
+            <p class="week-weather-icon">🌧</p>
+            <p>Mon</p>
+          </div>
+          <div class="col-2">
+            <p class="week-weather-icon">⛅</p>
+            <p>Tue</p>
+          </div>
+          <div class="col-2">
+            <p class="week-weather-icon">⛅</p>
+            <p>Wed</p>
+          </div>
+          <div class="col-2">
+            <p class="week-weather-icon">🌧</p>
+            <p>Thu</p>
+          </div>
+          <div class="col-2">
+            <p class="week-weather-icon">🌧</p>
+            <p>Fri</p>
+          </div>
+          <div class="col-2">
+            <p class="week-weather-icon">⛅</p>
+            <p>Sat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
