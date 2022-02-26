@@ -76,3 +76,13 @@ li {
 .week-weather-icon {
   font-size: 25px;
 }
+#copy-right{
+  margin:0 0 3rem 2rem; 
+  color: #000c66;
+}
+#copy-right a{
+  text-decoration: underline;
+  color: #000c66;
+  font-weight: bold;
+}
+
